@@ -14,6 +14,7 @@ $(document).ready(function(){
             type: 'post',
             url: '/api/ssanews',
             data: publishdata_json,
+			contentType: 'application/json;charset=UTF-8',
             async:false,
             dateType: 'json',
             success: function (result) {
