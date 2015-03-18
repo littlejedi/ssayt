@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js" ></script>
+    <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js" ></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <style type="text/css" >
+        #featured .ui-tabs-panel .info{
+            display:none;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#featured").tabs({fx:[{opacity: "toggle", duration: 'slow'}, {opacity: "toggle", duration: 'normal'}],
+                show: function(event, ui){
+                    $('#featured .ui-tabs-panel .info').hide();
+                    var infoheight=$('.info', ui.panel).height();
+                    $('.info', ui.panel).css('height', '0px').animate({ 'height': infoheight }, 500);
+                }
+            }).tabs("rotate", 5000, true);
+            $('#featured').hover(
+                    function(){ $('#featured').tabs('rotate', 0, true); },
+                    function(){ $('#featured').tabs('rotate', 1500, true); }
+            );
+            $('#featured .ui-tabs-panel a.hideshow').click(function(){
+                if($(this).text()=='Hide'){
+                    $(this).parent('.info').animate({ 'height': '0px' }, 500);
+                    $(this).text('Show');
+                }
+                else{
+                    $(this).parent('.info').animate({ 'height': '70px' }, 500);
+                    $(this).text('Hide');
+                }
+                return false;
+            });
+        });
+    </script>
+
+    <title>Home</title>
+</head>
+<body>
+<div class="container picture">
+    <div class="link">
+        <a href="#">CHINESE</a>
+        <label>|</label>
+        <a href="feedback.html">FEEDBACK</a>
+    </div>
+</div>
+
+<nav class="navbar navbar-default nav_nav" role="navigation">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li style="font-size: 20px;"><a href="index.html">Home</a></li>
+                <hr/>
+                <li class="dropdown">
+                    <a  href="##" data-toggle="dropdown" class="dropdown-toggle">THREE PLANS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Science-seed-plan.html">Science Seed Plan</a></li>
+                        <li><a href="Science-Buddy-Plan.html">Science Buddy Plan</a></li>
+                        <li><a href="Science-Gardener-Plan.html">Science Gardener Plan</a></li>
+                    </ul>
+                </li>
+                <hr/>
+                <li class="dropdown">
+                    <a  href="##" data-toggle="dropdown" class="dropdown-toggle">MEMBERSHIP<br/>&BRANCHES</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Membership.html#mark3">Interest Membership</a></li>
+                        <li><a href="Membership.html#mark4">Intern Membership</a></li>
+                        <li><a href="Membership.html#mark5">Research Membership</a></li>
+                        <li><a href="Membership.html#mark6">Senior Membership</a></li>
+                        <li><a href="Membership.html#mark7">Talent Membership</a></li>
+                        <li><a href="Membership.html#mark9">BRANCHES</a></li>
+                    </ul>
+                </li>
+                <hr/>
+                <li class="dropdown">
+                    <a href="##" data-toggle="dropdown" class="dropdown-toggle">ACTIVITIES</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="CONTESTS-FORUM-EXPO.html">CONTESTS, FORUM&EXPO</a></li>
+                        <ul>
+                            <li><a href="CONTESTS-FORUM-EXPO.html#mark1">SHANGHAI</a></li>
+                            <li><a href="CONTESTS-FORUM-EXPO.html#mark4">CNINA</a></li>
+                            <li><a href="CONTESTS-FORUM-EXPO.html#mark8">INTERNATIONAL</a></li>
+                        </ul>
+                        <li><a href="INTERNATIONAL-SUMMER-CAMPS.html">INTERNATIONAL SUMMER CAMPS</a></li>
+                        <li><a href="Australian-National-Chemistry-Quiz.html">AUSTRALIAN NATIONAL CHEMISTRY QUIZ</a></li>
+                    </ul>
+                </li>
+                <hr/>
+                <li><a href="Partners.html">PARTNERS</a></li>
+                <hr/>
+                <li class="dropdown">
+                    <a  href="##" data-toggle="dropdown" class="dropdown-toggle">RESOURCES</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Shanghai-STEM-Cloud-Center.html">STEM Cloud Center</a></li>
+                    </ul>
+                </li>
+                <hr/>
+                <li><a href="news.html">NEWS</a></li>
+                <hr/>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <form action="##" class="navbar-form navbar-left" rol="search">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="SEARCH" />
+                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="container">
+        <div class="col-md-12">
+            <div id="featured" >
+                <ul class="ui-tabs-nav">
+                    <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1"><a href="#fragment-1"><img src="images/picture1.jpg" alt="" /><span>2014 ISEF China Delegation</span></a></li>
+                    <li class="ui-tabs-nav-item" id="nav-fragment-2"><a href="#fragment-2"><img src="images/picture2.jpg" alt="" /><span>2014 ISEF Grand Awards Winner Yue Yao</span></a></li>
+                    <li class="ui-tabs-nav-item" id="nav-fragment-3"><a href="#fragment-3"><img src="images/picture3.jpg" alt="" /><span>2014 ISWEEEP Shanghai Delegation</span></a></li>
+                </ul>
+                <!-- First Content -->
+                <div id="fragment-1" class="ui-tabs-panel" style="">
+                    <img src="images/picture1.jpg" alt="" />
+                </div>
+                <!-- Second Content -->
+                <div id="fragment-2" class="ui-tabs-panel ui-tabs-hide" style="">
+                    <img src="images/picture2.jpg" alt="" />
+                </div>
+                <!-- Third Content -->
+                <div id="fragment-3" class="ui-tabs-panel ui-tabs-hide" style="">
+                    <img src="images/picture3.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+        <div class="col-md-12" style="height: 30px;"></div>
+        <div class="col-md-12" >
+            <div class="col-xs-5 col-md-5 news">
+                <label class="title">News</label><br />
+                <a href="news.html"><div class="new">
+                    <img src="images/newPicture.jpg">
+                    <div class="new_right">
+                        <label class="new_word">SSAYT senior membership student Yue Yao won three 2014 Inter ISEF Grand Awards !</label>
+                    </div>
+                </div>.</a>
+            </div>
+
+            <div class="col-xs-6 col-md-6 follow">
+                <label class="title">Scan QR Code & Follow Us On Wechat</label><br />
+                <div class="follow_picture">
+                    <img src="images/follow_picture_left.png">
+                    <img src="images/two_dimension_code.png">
+                </div>.
+            </div>
+        </div>
+        <div class="col-md-12" style="height: 30px;"></div>
+        </div>
+
+        <div class="container footer">
+            <div class="col-md-12" style="height: 50px;"></div>
+            <div class="col-md-12">
+                <nav class="navbar navbar-default footer_nav" role="navigation">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                        <div class="container">
+                            <ul class="nav navbar-nav">
+                                <li><a class="navbar-brand" href="Membership.html">Our<br/>Membership</a></li>
+                                <li><img src="images/part-line.png" class="part-line"/></li>
+                                <li><img src="images/interest.png" class="icon"/></li>
+                                <li><a href="Membership.html#mark3">Interest<br/>Membership</a></li>
+                                <li><img src="images/part-line.png" class="part-line"/></li>
+                                <li><img src="images/intern.png" class="icon"/></li>
+                                <li><a href="Membership.html#mark4">Intern<br/>Membership</a></li>
+                                <li><img src="images/part-line.png" class="part-line"/></li>
+                                <li><img src="images/talent.png" class="icon"/></li>
+                                <li><a href="Membership.html#mark7">Talent<br/>Membership</a></li>
+                                <li><img src="images/part-line.png" class="part-line"/></li>
+                                <li><img src="images/research.png" class="icon"/></li>
+                                <li><a href="Membership.html#mark5">Research<br/>Membership</a></li>
+                                <li><img src="images/part-line.png" class="part-line"/></li>
+                                <li><img src="images/senior.png" class="icon"/></li>
+                                <li><a href="Membership.html#mark6">Senior<br/>Membership</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-12 information">
+                <div class="col-xs-4">
+                    <img src="images/address.png">
+                </div>
+                <div class="col-xs-8">
+                    <ul class="list-unstyled">
+                        <li>Shanghai Science Association for Young Talents</li>
+                        <li>Address: Room 603, No.59, Nanchang Road, Huangpu District, Shanghai, China 200020</li>
+                        <li>Tel: +86(0)21 33311679</li>
+                        <li>http://www.shssp.org</li>
+                        <li>STEM Cloud Center www.stemcloud.cn</li>
+                        <li>© Shanghai Science Association for Young Talents</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12" style="height: 20px;"></div>
+            </div>
+    </div>
+
+</body>
+</html>

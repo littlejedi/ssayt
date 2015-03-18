@@ -1,0 +1,4 @@
+1. 在/js目录下添加了news.js的页面，在news.html中news.js被使用
+2. 在news.html中修改了相关标签的内容，以添加新闻title和body
+3. 增加了页面post-news.html
+4. 增加了页面publishnews.js，在页面post-news.html中使用。
