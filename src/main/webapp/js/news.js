@@ -1,11 +1,11 @@
-﻿$(document).ready(function(){
+$(document).ready(function(){
     $.ajax({
         type: 'get',
-        url: '/api/ssanews/recent',
+        url: 'http://www.stemcloud.cn/api/ssanews/recent',
         dataType:"html",
         success: function (result) {
-  			  /*var result = '[{"id":1,"title":"942524502fcb45f8a91b398e7b0aa1e7","body":"body:942524502fcb45f8a91b398e7b0aa1e7","published":"2015-03-04T04:52:01.000+0000"},{"id":2,"title":"SSA新闻标题","body":"正文","published":"2015-03-03T06:37:28.000+0000"}]';*/
-     			var news = JSON.parse(result);
+  			  var result = '[{"id":1,"title":"942524502fcb45f8a91b398e7b0aa1e7","body":"body:942524502fcb45f8a91b398e7b0aa1e7","published":"2015-03-04T04:52:01.000+0000"},{"id":2,"title":"SSA新闻标题","body":"正文","published":"2015-03-03T06:37:28.000+0000"}]';
+     			news = JSON.parse(result);
      			myid = 0;
      			for(var i = 0; i < news.length; i++)
      			{

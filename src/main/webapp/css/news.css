@@ -103,11 +103,6 @@
     margin-bottom: 30px;
 }
 
-.essay span
-{
-    margin-left: 35%;
-}
-
 .photo
 {
     margin-left: 8%;
@@ -119,6 +114,10 @@
 .smalltitle
 {
     margin-left: 4%;
+}
+
+.red {
+	color: red;
 }
 
 /*****************************.catalog***************************/
@@ -204,3 +203,26 @@
     color: white;
 }
 
+.cata_total {
+	width: 84%;
+	margin-left: 8%;
+}
+
+.cata_title {
+	text-align: left;
+}
+
+.cata_content {
+	text-align: left;
+}
+
+.cata {
+	border-bottom: 1px solid #B9B9B7;
+}
+
+.cata_pic {
+	width: 200px;
+	height: 140px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
